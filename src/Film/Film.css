@@ -1,101 +1,85 @@
-.film{
-    max-width: 300px;
-    cursor: pointer;
-    background-color: rgb(82, 13, 91);
-    transition: .5s;
-    flex: 1 1 300px; 
-    max-width: 300px; 
+.film {
+  background: #1f2a40;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-.film__wrap{
-    height: 100%;
-    background-color: rgb(37, 15, 59);
-    transition: .5s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    border: 1px solid rgb(255, 132, 0);
+.film:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
-.film:hover{
-    box-shadow: -5px 5px 10px rgb(82, 13, 91);
+.film__wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.film:hover .film__wrap{
-    transform: translate(8px, -8px);
+/* ===== IMAGE ===== */
+
+.film__img {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
 }
 
-.film__img{
-    width: 300px;
-    height: 400px;
-    transition: .5s;
+.film__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
 }
 
-.film__img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.film:hover .film__img img {
+  transform: scale(1.05);
 }
 
-.film__title{
-    transition: .5s;
-    font-size: 20px;
-    font-weight: 700;
+/* ===== TEXT ===== */
+
+.film__title {
+  padding: 15px 15px 5px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-.film__genre{
-    transition: .5s;
+.film__genre {
+  padding: 0 15px 15px;
+  font-size: 14px;
+  color: #b0b8c5;
 }
 
-
-@media (max-width: 1024px) {
-    .film {
-        width: 45%; 
-    }
-
-    .film__img {
-        width: 100%;
-        height: auto;
-    }
-
-    .film__title {
-        font-size: 18px;
-    }
-
-    .film__genre {
-        font-size: 14px;
-    }
-}
+/* ===== MOBILE ===== */
 
 @media (max-width: 768px) {
-    .film {
-        width: 100%; 
-    }
+  .film__img {
+    height: 280px;
+  }
 
-    .film__img {
-        height: 300px; 
-    }
+  .film__title {
+    font-size: 16px;
+  }
 
-    .film__title {
-        font-size: 16px;
-    }
-
-    .film__genre {
-        font-size: 12px;
-    }
+  .film__genre {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
-    .film__img {
-        height: 300px; 
-    }
+  .film__img {
+    height: 220px;
+  }
 
-    .film__title {
-        font-size: 14px;
-    }
+  .film__title {
+    font-size: 14px;
+  }
 
-    .film__genre {
-        font-size: 10px;
-    }
+  .film__genre {
+    font-size: 12px;
+  }
 }

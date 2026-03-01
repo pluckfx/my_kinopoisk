@@ -1,75 +1,89 @@
-.skeleton-box {
-    flex: 1 1 300px; 
-    max-width: 300px; 
-    background: linear-gradient(90deg, #3a1d56 25%, #4b2b6a 50%, #3a1d56 75%);
-    background-size: 200% 100%;
-    animation: skeleton-loading 1.5s infinite;
-    border-radius: 6px;
+/* ===== SKELETON BASE ===== */
+
+.skeleton {
+  pointer-events: none;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-@keyframes skeleton-loading {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
+@keyframes fadeIn {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
 }
+
+.skeleton-box {
+  width: 100%;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    #1a2638 25%,
+    #24344d 50%,
+    #1a2638 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* ===== SHIMMER ANIMATION ===== */
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ===== IMAGE ===== */
 
 .skeleton .film__img {
-    height: 400px;
+  height: 360px;
+  margin-bottom: 15px;
+  overflow: hidden;
 }
+
+/* ===== TITLE ===== */
 
 .skeleton .film__title.short {
-    width: 70%;
-    height: 20px;
-    margin: 10px auto;
+  height: 18px;
+  width: 70%;
+  margin: 0 auto 12px;
 }
+
+/* ===== GENRE ===== */
 
 .skeleton .film__genre {
-    width: 50%;
-    height: 16px;
-    margin: 10px auto 20px;
+  height: 14px;
+  width: 50%;
+  margin: 0 auto 20px;
 }
 
-@media (max-width: 1024px) {
-  .skeleton .film__img {
-      height: 300px;
-  }
-
-  .skeleton .film__title.short {
-      height: 18px;
-  }
-
-  .skeleton .film__genre {
-      height: 14px;
-  }
-}
+/* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px) {
   .skeleton .film__img {
-      height: 250px;
+    height: 260px;
   }
 
   .skeleton .film__title.short {
-      height: 16px;
+    height: 16px;
   }
 
   .skeleton .film__genre {
-      height: 12px;
+    height: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .skeleton .film__img {
-      height: 300px;
+    height: 200px;
   }
 
   .skeleton .film__title.short {
-      height: 14px;
+    height: 14px;
   }
 
   .skeleton .film__genre {
-      height: 10px;
+    height: 10px;
   }
 }
