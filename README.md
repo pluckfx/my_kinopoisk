@@ -5,10 +5,10 @@
 ## Превью
 
 ### Десктоп
-![Desktop Preview](./src/Screen%20desktop.JPG)
+![Desktop Preview](./src/Screen-desktop.JPG)
 
 ### Мобильная версия
-![Mobile Preview](./src/Screen%20mobile.JPG)
+![Mobile Preview](./src/Screen-mobile.JPG)
 
 ## Функции
 
